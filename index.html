@@ -71,6 +71,18 @@
       vertical-align: middle;
       margin-right: 0.3em;
     }
+    td[data-status]::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 0.3em;
+    }
+    td[data-status="live"]::before  { background: #22c55e; }
+    td[data-status="down"]::before  { background: #ef4444; }
+    td[data-status="warn"]::before  { background: #eab308; }
   </style>
 </head>
 <body>
@@ -152,7 +164,7 @@
       <table>
         <thead>
           <tr>
-            <th><img src="assets/provider-icons/catbox.png" alt="" width="14" height="14"> Provider</th>
+            <th>Provider</th>
             <th>📦 Max Size</th>
             <th>⏱ Expiry</th>
             <th>Status</th>
@@ -164,63 +176,63 @@
             <td><img src="assets/provider-icons/catbox.png" alt="" width="14" height="14"> Catbox.moe</td>
             <td>200 MB</td>
             <td>—</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td></td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/fileditch.png" alt="" width="14" height="14"> FileDitch</td>
             <td>25 GB</td>
             <td>Indefinite</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td>Inactive &gt;30d may delete</td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/frisk.png" alt="" width="14" height="14"> Frisk</td>
             <td>2 GB</td>
             <td>~1 day</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td>Extendable on re-upload</td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/litterbox.png" alt="" width="14" height="14"> Litterbox</td>
             <td>1 GB</td>
             <td>1h / 24h / 72h</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td>Temporary/expiring files</td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/uguu_uguu_se.png" alt="" width="14" height="14"> Uguu.se</td>
             <td>256 MB</td>
             <td>—</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td></td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/tmpfilelink.png" alt="" width="14" height="14"> TmpFile.link</td>
             <td>—</td>
             <td>—</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td></td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/freeimage_freeimage_host.png" alt="" width="14" height="14"> FreeImage.host</td>
             <td>64 MB</td>
             <td>—</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td>Images only</td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/tempsh.png" alt="" width="14" height="14"> TempSH</td>
             <td>4 GB</td>
             <td>3 days</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td></td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/httpbin.png" alt="" width="14" height="14"> HttpBin.org</td>
             <td>—</td>
             <td>—</td>
-            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;vertical-align:middle;margin-right:0.3em;"></span> Live</td>
+            <td data-status="live">Live</td>
             <td>Test service</td>
           </tr>
         </tbody>
