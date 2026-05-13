@@ -31,36 +31,24 @@
     header p:last-of-type {
       text-align: center;
     }
-    /* ── Screenshot carousel ── */
-    input[name="scr"] {
-      display: none;
-    }
-    /* ── Screenshot carousel ── */
-    input[name="scr"] {
-      display: none;
-    }
     figure {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
       margin: 1.5em 0;
       padding: 1em;
       background: var(--background-alt);
       border-radius: 8px;
-      animation: fade 0.3s ease;
     }
-    @keyframes fade {
-      from { opacity: 0.3; }
-      to   { opacity: 1; }
-    }
-    input#scr1:checked ~ figure#s1,
-    input#scr2:checked ~ figure#s2,
-    input#scr3:checked ~ figure#s3 {
-      display: block;
+    figure div {
+      flex: 1;
+      min-width: 280px;
     }
     figure img {
-      display: block;
-      margin: 0 auto;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      display: block;
+      margin: 0 auto;
     }
     figcaption {
       text-align: center;
@@ -68,44 +56,6 @@
       font-size: 0.9em;
       margin-top: 0.5em;
       opacity: 0.8;
-    }
-    section div:last-of-type {
-      text-align: center;
-      margin-top: 0.5em;
-    }
-    section div:last-of-type label {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--border, #ccc);
-      margin: 0 6px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    input#scr1:checked ~ div:last-of-type label[for="scr1"],
-    input#scr2:checked ~ div:last-of-type label[for="scr2"],
-    input#scr3:checked ~ div:last-of-type label[for="scr3"] {
-      background: var(--text-main, #333);
-    }
-    section div:last-of-type {
-      text-align: center;
-      margin-top: 0.5em;
-    }
-    section div:last-of-type label {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--border, #ccc);
-      margin: 0 6px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    input#scr1:checked ~ div:last-of-type label[for="scr1"],
-    input#scr2:checked ~ div:last-of-type label[for="scr2"],
-    input#scr3:checked ~ div:last-of-type label[for="scr3"] {
-      background: var(--text-main, #333);
     }
   </style>
 </head>
@@ -151,35 +101,36 @@
 
     <section>
       <h2>Screenshots</h2>
-
-      <input type="radio" name="scr" id="scr1" checked>
-      <input type="radio" name="scr" id="scr2">
-      <input type="radio" name="scr" id="scr3">
-
-      <figure id="s1">
+      <figure>
         <div>
-          <img src="assets/screenshots/main-screen.jpg" alt="Main screen (light/dark split)" loading="lazy">
-          <figcaption>Main screen</figcaption>
+          <img src="assets/screenshots/main-screen-light.jpg" alt="Main screen (light mode)" loading="lazy">
+          <figcaption>Main screen &mdash; light</figcaption>
+        </div>
+        <div>
+          <img src="assets/screenshots/main-screen-dark.jpg" alt="Main screen (dark mode)" loading="lazy">
+          <figcaption>Main screen &mdash; dark</figcaption>
         </div>
       </figure>
-      <figure id="s2">
+      <figure>
         <div>
-          <img src="assets/screenshots/upload-screen.jpg" alt="Upload screen (light/dark split)" loading="lazy">
-          <figcaption>Upload screen</figcaption>
+          <img src="assets/screenshots/upload-screen-light.jpg" alt="Upload screen (light mode)" loading="lazy">
+          <figcaption>Upload screen &mdash; light</figcaption>
+        </div>
+        <div>
+          <img src="assets/screenshots/upload-screen-dark.jpg" alt="Upload screen (dark mode)" loading="lazy">
+          <figcaption>Upload screen &mdash; dark</figcaption>
         </div>
       </figure>
-      <figure id="s3">
+      <figure>
         <div>
-          <img src="assets/screenshots/settings-screen.jpg" alt="Settings screen (light/dark split)" loading="lazy">
-          <figcaption>Settings screen</figcaption>
+          <img src="assets/screenshots/settings-screen-light.jpg" alt="Settings screen (light mode)" loading="lazy">
+          <figcaption>Settings screen &mdash; light</figcaption>
+        </div>
+        <div>
+          <img src="assets/screenshots/settings-screen-dark.jpg" alt="Settings screen (dark mode)" loading="lazy">
+          <figcaption>Settings screen &mdash; dark</figcaption>
         </div>
       </figure>
-
-      <div>
-        <label for="scr1"></label>
-        <label for="scr2"></label>
-        <label for="scr3"></label>
-      </div>
     </section>
 
     <section>
