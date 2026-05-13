@@ -15,6 +15,11 @@ content. Copy assets from there, do not recreate them.
 - Screenshots: `docs/screenshots/*.jpg`
 - Changelog / feature text: `README.md`, `CHANGELOG.md`, `docs/USER_MANUAL.md`
 
+## Live site
+
+Production: **https://uppidi.com** (GitHub Pages, custom domain).
+Any push to `main` deploys immediately to production. Test via Caddy dev server first.
+
 ## Dev server
 
 The site is served via Caddy at `http://10.20.30.24:81/`. Provide direct URLs (e.g.
