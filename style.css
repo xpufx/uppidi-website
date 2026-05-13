@@ -1,0 +1,80 @@
+/* ── Navigation ── */
+nav {
+  text-align: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--border, #ccc);
+}
+nav a {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav a:last-child {
+  float: right;
+}
+
+/* ── Header ── */
+picture {
+  display: block;
+  text-align: center;
+}
+header p:last-of-type {
+  text-align: center;
+}
+
+/* ── Screenshots ── */
+figure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1.5em 0;
+  padding: 1em;
+  background: var(--background-alt);
+  border-radius: 8px;
+}
+figure div {
+  flex: 1;
+  min-width: 280px;
+}
+figure img {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: block;
+  margin: 0 auto;
+}
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  opacity: 0.8;
+}
+
+/* ── Provider table ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding: 0.5em 0.6em;
+}
+th img, td img {
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+td[data-status]::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+td[data-status="live"]::before  { background: #22c55e; }
+td[data-status="down"]::before  { background: #ef4444; }
+td[data-status="warn"]::before  { background: #eab308; }
