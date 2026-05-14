@@ -57,20 +57,10 @@ figure div {
   from { opacity: 0.3; }
   to   { opacity: 1; }
 }
-input#scr1:checked ~ div figure#s1,
-input#scr2:checked ~ div figure#s2,
-input#scr3:checked ~ div figure#s3 {
-  display: flex;
-}
-figure div {
-  flex: 1;
-  min-width: 280px;
-}
 @media (max-width: 600px) {
-  figure div {
-    min-width: 0;
+  figure {
+    gap: 0.5em;
   }
-}
 figure img {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
