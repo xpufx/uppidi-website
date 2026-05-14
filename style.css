@@ -48,15 +48,12 @@ figure {
 input#scr1:checked ~ div figure#s1,
 input#scr2:checked ~ div figure#s2,
 input#scr3:checked ~ div figure#s3 {
-  display: block;
-  font-size: 0;
+  display: flow-root;
 }
 figure > div {
-  display: inline-block;
+  float: left;
   width: calc(50% - 0.5em);
   text-align: center;
-  vertical-align: top;
-  font-size: 1rem;
 }
 figure > div + div {
   margin-left: 1em;
