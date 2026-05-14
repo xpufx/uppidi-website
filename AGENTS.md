@@ -89,3 +89,5 @@ assets/
 - Provider info → `lib/core/registry.dart` (provider registry), `lib/providers/*.dart` (metadata)
 - Build instructions → `BUILDING.md`
 - Changelog → `CHANGELOG.md`
+
+**Caution:** `docs/USER_MANUAL.md` previously contained references to "Immich" (a provider that was never implemented) and overblown platform claims (iOS, macOS). Both have been corrected. Always cross-check provider lists against `lib/core/registry.dart` rather than prose docs.
