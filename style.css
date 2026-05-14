@@ -46,7 +46,10 @@ input#scr2:checked ~ div figure#s2,
 input#scr3:checked ~ div figure#s3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  column-gap: 1em;
+  row-gap: 0;
   align-items: stretch;
 }
 figure div {
