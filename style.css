@@ -35,15 +35,23 @@ input[name="scr"] {
 }
 figure {
   display: none;
-  flex-wrap: wrap;
-  gap: 1em;
   margin: 0;
   padding: 1em;
   background: var(--background-alt);
   border-radius: 8px;
-  align-items: flex-start;
-  align-content: flex-start;
   animation: fade 0.3s ease;
+}
+input#scr1:checked ~ div figure#s1,
+input#scr2:checked ~ div figure#s2,
+input#scr3:checked ~ div figure#s3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+figure div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @keyframes fade {
   from { opacity: 0.3; }
