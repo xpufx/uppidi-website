@@ -41,35 +41,30 @@ figure {
   border-radius: 8px;
   animation: fade 0.3s ease;
 }
-input#scr1:checked ~ div figure#s1,
-input#scr2:checked ~ div figure#s2,
-input#scr3:checked ~ div figure#s3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-auto-flow: column;
-  column-gap: 1em;
-  row-gap: 0;
-  align-items: stretch;
-}
-figure div {
-  text-align: center;
-  align-self: start;
-}
 @keyframes fade {
   from { opacity: 0.3; }
   to   { opacity: 1; }
 }
-@media (max-width: 600px) {
-  figure {
-    grid-template-columns: 1fr 1fr;
-  }
+input#scr1:checked ~ div figure#s1,
+input#scr2:checked ~ div figure#s2,
+input#scr3:checked ~ div figure#s3 {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: flex-start;
+}
+figure div {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
 }
 figure img {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 figcaption {
   text-align: center;
@@ -80,14 +75,14 @@ figcaption {
 }
 
 /* ── Carousel arrows ── */
-section div:nth-of-type(2) {
+section div:first-of-type {
   position: relative;
 }
 label[id^="p"], label[id^="n"] {
   display: none;
   position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 2.5em;
   line-height: 1;
   cursor: pointer;
@@ -102,13 +97,12 @@ label[id^="p"]:hover, label[id^="n"]:hover {
 }
 label[id^="p"] { left: 0.1em; }
 label[id^="n"] { right: 0.1em; }
-
-input#scr1:checked ~ div:nth-of-type(2) label#p1,
-input#scr1:checked ~ div:nth-of-type(2) label#n1,
-input#scr2:checked ~ div:nth-of-type(2) label#p2,
-input#scr2:checked ~ div:nth-of-type(2) label#n2,
-input#scr3:checked ~ div:nth-of-type(2) label#p3,
-input#scr3:checked ~ div:nth-of-type(2) label#n3 {
+input#scr1:checked ~ div label#p1,
+input#scr1:checked ~ div label#n1,
+input#scr2:checked ~ div label#p2,
+input#scr2:checked ~ div label#n2,
+input#scr3:checked ~ div label#p3,
+input#scr3:checked ~ div label#n3 {
   display: block;
 }
 
