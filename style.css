@@ -41,6 +41,7 @@ figure {
   padding: 1em;
   background: var(--background-alt);
   border-radius: 8px;
+  align-items: flex-start;
   animation: fade 0.3s ease;
 }
 @keyframes fade {
