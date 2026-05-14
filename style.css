@@ -48,26 +48,14 @@ figure {
 input#scr1:checked ~ div figure#s1,
 input#scr2:checked ~ div figure#s2,
 input#scr3:checked ~ div figure#s3 {
-  display: flow-root;
-  line-height: 0;
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
 }
 figure > div {
-  float: left;
-  width: calc(50% - 0.5em);
+  flex: 1;
+  min-width: 0;
   text-align: center;
-  line-height: normal;
-}
-figure > div + div {
-  margin-left: 1em;
-}
-figure > div {
-  display: inline-block;
-  width: calc(50% - 0.5em);
-  text-align: center;
-  vertical-align: top;
-}
-figure > div + div {
-  margin-left: 1em;
 }
 figure img {
   border-radius: 6px;
