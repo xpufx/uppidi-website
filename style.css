@@ -80,14 +80,14 @@ figcaption {
 }
 
 /* ── Carousel arrows ── */
-section div:first-of-type {
+section div:nth-of-type(2) {
   position: relative;
 }
 label[id^="p"], label[id^="n"] {
   display: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 50%;
+  transform: translateY(50%);
   font-size: 2.5em;
   line-height: 1;
   cursor: pointer;
@@ -103,12 +103,12 @@ label[id^="p"]:hover, label[id^="n"]:hover {
 label[id^="p"] { left: 0.1em; }
 label[id^="n"] { right: 0.1em; }
 
-input#scr1:checked ~ div label#p1,
-input#scr1:checked ~ div label#n1,
-input#scr2:checked ~ div label#p2,
-input#scr2:checked ~ div label#n2,
-input#scr3:checked ~ div label#p3,
-input#scr3:checked ~ div label#n3 {
+input#scr1:checked ~ div:nth-of-type(2) label#p1,
+input#scr1:checked ~ div:nth-of-type(2) label#n1,
+input#scr2:checked ~ div:nth-of-type(2) label#p2,
+input#scr2:checked ~ div:nth-of-type(2) label#n2,
+input#scr3:checked ~ div:nth-of-type(2) label#p3,
+input#scr3:checked ~ div:nth-of-type(2) label#n3 {
   display: block;
 }
 
