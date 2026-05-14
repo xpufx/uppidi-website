@@ -51,6 +51,7 @@ input#scr3:checked ~ div figure#s3 {
 }
 figure div {
   text-align: center;
+  align-self: start;
 }
 @keyframes fade {
   from { opacity: 0.3; }
@@ -58,8 +59,9 @@ figure div {
 }
 @media (max-width: 600px) {
   figure {
-    gap: 0.5em;
+    grid-template-columns: 1fr 1fr;
   }
+}
 figure img {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
