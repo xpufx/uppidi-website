@@ -27,7 +27,7 @@
       <img src="assets/logo-light.png" alt="Uppidi Upload logo" width="200" height="200">
     </picture>
     <h1>Uppidi Upload</h1>
-    <p>A simple, cross-platform file uploader that works on your phone, tablet, desktop, or web browser. Upload images, videos, and other files to your choice of free public hosting services.</p>
+    <p>A configurable media pipeline that uploads files to public hosts <em>or</em> your own infrastructure. Desktop-first: drag, drop, paste, and relay to IRC, Discord, Matrix, and more via Matterbridge.</p>
     <p><a href="download.html" role="button">Download Now ⬇</a></p>
   </header>
 
@@ -35,17 +35,18 @@
     <section>
       <h2>Features</h2>
       <ul>
-        <li><strong>9 free hosting providers</strong> — Catbox, FileDitch, Frisk, Litterbox, Uguu.se, TmpFile.link, FreeImage.host, TempSH, and more</li>
+        <li><strong>13 hosting providers</strong> — Catbox, FileDitch, Frisk, Litterbox, Uguu.se, TmpFile.link, FreeImage.host, TempSH, plus your own Telegram Bot, Zulip, CustomUguu, and Matterbridge</li>
+        <li><strong>Your own infrastructure</strong> — configure and authenticate with private servers: Telegram Bot, Zulip, self-hosted Uguu, and Matterbridge for IRC/Discord/Matrix/Slack relay</li>
+        <li><strong>Desktop-first experience</strong> — drag files from your file manager, paste images from clipboard, real hover overlay feedback</li>
+        <li><strong>Message templates</strong> — set a global template in Settings ({url}, {filename}, {filesize}) and edit per upload</li>
+        <li><strong>History → IRC pipeline</strong> — re-share any past upload to a Matterbridge gateway from the history screen</li>
         <li><strong>Streaming uploads</strong> — handles large files without consuming excessive memory</li>
         <li><strong>Image quality selector</strong> — choose Original, Medium (50%), or Low (25%) compression</li>
         <li><strong>Image cropping</strong> — crop images before uploading</li>
-        <li><strong>Upload history</strong> — view, copy, and share past uploads</li>
-        <li><strong>Templated share messages</strong> — share links with customizable message templates</li>
         <li><strong>Provider health checks</strong> — test connectivity and enable/disable providers</li>
-        <li><strong>Drag &amp; drop</strong> — drag files onto the upload area on desktop</li>
         <li><strong>Dark &amp; light theme</strong> — system-following theme with customizable seed colors</li>
         <li><strong>Multi-language</strong> — English, Turkish, and Italian</li>
-        <li><strong>Cross-platform</strong> — Android, Linux, Windows, and web</li>
+        <li><strong>Cross-platform</strong> — Android, Linux, macOS, Windows, and web</li>
       </ul>
     </section>
 
@@ -179,6 +180,34 @@
             <td data-status="live">Live</td>
             <td>Test service</td>
           </tr>
+          <tr>
+            <td><img src="assets/provider-icons/telegram.png" alt="" width="14" height="14"> Telegram Bot</td>
+            <td>—</td>
+            <td>—</td>
+            <td data-status="live">Live</td>
+            <td>Your own bot, files or images with captions</td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/zulip.png" alt="" width="14" height="14"> Zulip</td>
+            <td>—</td>
+            <td>—</td>
+            <td data-status="live">Live</td>
+            <td>Channels and direct messages</td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/custom_uguu.png" alt="" width="14" height="14"> CustomUguu</td>
+            <td>—</td>
+            <td>—</td>
+            <td data-status="live">Live</td>
+            <td>Self-hosted Uguu-compatible endpoint</td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/matterbridge.png" alt="" width="14" height="14"> Matterbridge</td>
+            <td>—</td>
+            <td>—</td>
+            <td data-status="live">Live</td>
+            <td>Relay to IRC, Discord, Matrix, Slack, Telegram</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -188,6 +217,7 @@
       <ul>
         <li><strong>Android</strong> &mdash; phones and tablets (arm64-v8a, armeabi-v7a, x86_64)</li>
         <li><strong>Linux</strong> &mdash; desktop (tar.gz + AppImage)</li>
+        <li><strong>macOS</strong> &mdash; desktop (DMG)</li>
         <li><strong>Windows</strong> &mdash; desktop (zip)</li>
         <li><strong>Web</strong> &mdash; browser (Flutter web, some providers require a proxy)</li>
       </ul>
