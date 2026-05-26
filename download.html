@@ -73,12 +73,6 @@
     </section>
 
     <section>
-      <h2>Web Browser</h2>
-      <p>Uppidi works in web browsers via Flutter web. Note that some hosting services cannot be used directly from a browser due to CORS restrictions. On native platforms, you can configure an HTTP/HTTPS proxy in the settings to route uploads through an intermediary server.</p>
-      <p><a href="https://github.com/xpufx/uppidi-upload/releases/latest">Download the web build</a> from GitHub Releases and serve the <code>build/web/</code> directory with any static web server.</p>
-    </section>
-
-    <section>
       <h2>Build from Source</h2>
       <p>You can build Uppidi yourself if you prefer. See the full build instructions in the repository:</p>
       <ol>
@@ -89,8 +83,8 @@
           <ul>
             <li><code>flutter build apk --release --target-platform android-arm64</code> &mdash; Android</li>
             <li><code>flutter build linux --release</code> &mdash; Linux</li>
+            <li><code>flutter build macos --release</code> &mdash; macOS</li>
             <li><code>flutter build windows --release</code> &mdash; Windows</li>
-            <li><code>flutter build web</code> &mdash; Web</li>
           </ul>
         </li>
       </ol>
@@ -109,7 +103,6 @@
         <li><strong>Linux:</strong> GTK 3 runtime, any modern distribution</li>
         <li><strong>macOS:</strong> macOS 11 (Big Sur) or later</li>
         <li><strong>Windows:</strong> Windows 10 or later</li>
-        <li><strong>Web:</strong> Any modern browser (Chrome, Firefox, Safari, Edge)</li>
       </ul>
     </section>
   </main>
