@@ -18,7 +18,10 @@ content. Copy assets from there, do not recreate them.
 ## Live site
 
 Production: **https://uppidi.com** (GitHub Pages, custom domain).
-Any push to `main` deploys immediately to production. Test via Caddy dev server first.
+Pushes to `main` trigger the **pages-build-deployment** workflow (GitHub's internal Pages action,
+not a `.yml` in this repo). The action can occasionally fail to fire — if that happens, push an
+empty commit (`git commit --allow-empty -m "Trigger pages-build-deployment"`) to force it.
+Test via Caddy dev server first.
 
 ## Dev server
 
@@ -43,13 +46,14 @@ The site is served via Caddy at `http://10.20.30.24:81/`. Provide direct URLs (e
 | Linux (tar.gz) | `uppidi-upload-{version}-{hash}-linux.tar.gz` | |
 | Linux (AppImage) | `uppidi-upload-{version}-{hash}-x86_64.AppImage` → changed to `.appimage` from v1.2.0+5 | |
 | Windows (zip) | `uppidi-upload-{version}-{hash}-windows.zip` | (built by CI, upload as artifact) |
+| Linux (Flatpak) | `uppidi-upload-{version}-{hash}-linux.flatpak` | |
 
 Base URL for downloads: `https://github.com/xpufx/uppidi-upload/releases/tag/v{version}`
 Latest release API: `https://api.github.com/repos/xpufx/uppidi-upload/releases/latest`
 
 **Version must be synced manually** — check `~/code/uppidi/pubspec.yaml` for current version string.
 
-## Supported providers (9)
+## Supported providers (19)
 
 | ID | Display name | Favicon file |
 |---|---|---|
@@ -62,6 +66,16 @@ Latest release API: `https://api.github.com/repos/xpufx/uppidi-upload/releases/l
 | `freeimage_freeimage_host` | FreeImage.host | `freeimage_freeimage_host.png` |
 | `tempsh` | TempSH | `tempsh.png` |
 | `httpbin` | HttpBin.org (test) | `httpbin.png` |
+| `telegram` | Telegram Bot | `telegram.png` |
+| `zulip` | Zulip | `zulip.png` |
+| `custom_uguu` | CustomUguu | (user-configured, no icon) |
+| `matterbridge` | Matterbridge | (user-configured, no icon) |
+| `gofile` | GoFile | `gofile.png` |
+| `filebin` | Filebin.net | `filebin.png` |
+| `filester` | Filester.me | `filester.png` |
+| `storage_to` | Storage.to | `storage_to.png` |
+| `bzzhr` | Bzzhr.to | `bzzhr.png` |
+| `local` | Local (Image Editor) | (no icon) |
 
 ## Pages
 

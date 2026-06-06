@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download &mdash; Uppidi Upload</title>
-  <meta name="description" content="Download Uppidi Upload for Android, Linux, Windows, or run it in your web browser.">
+  <meta name="description" content="Download Uppidi Upload for Android, Linux, or Windows.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   <link rel="stylesheet" href="style.css">
@@ -58,12 +58,11 @@
       <p>Download the <a href="https://github.com/xpufx/uppidi-upload/releases/latest">tar.gz archive</a>, extract, and run the binary:</p>
       <pre><code>tar xzf uppidi-upload-*-linux.tar.gz
 ./uppidi-upload</code></pre>
-    </section>
 
-    <section>
-      <h2>macOS</h2>
-      <p>Download the <a href="https://github.com/xpufx/uppidi-upload/releases/latest">macOS zip archive</a> from the latest release, extract it, and run <code>Runner.app</code>.</p>
-      <p>macOS builds are produced by a <a href="https://github.com/xpufx/uppidi-upload/actions/workflows/macos-ios.yml">GitHub Actions workflow</a> and attached as build artifacts to the workflow run.</p>
+      <h3>Flatpak</h3>
+      <p>Download the <a href="https://github.com/xpufx/uppidi-upload/releases/latest">Flatpak</a> from the latest release and install:</p>
+      <pre><code>flatpak install --user uppidi-upload-*-linux.flatpak
+flatpak run com.uppidi.UppidiUpload</code></pre>
     </section>
 
     <section>
@@ -82,8 +81,7 @@
         <li>Build for your target:
           <ul>
             <li><code>flutter build apk --release --target-platform android-arm64</code> &mdash; Android</li>
-            <li><code>flutter build linux --release</code> &mdash; Linux</li>
-            <li><code>flutter build macos --release</code> &mdash; macOS</li>
+            <li><code>flutter build linux --release</code> &mdash; Linux (tar.gz + Flatpak via CI)</li>
             <li><code>flutter build windows --release</code> &mdash; Windows</li>
           </ul>
         </li>
@@ -101,7 +99,6 @@
       <ul>
         <li><strong>Android:</strong> Android 5.0 (API 21) or later</li>
         <li><strong>Linux:</strong> GTK 3 runtime, any modern distribution</li>
-        <li><strong>macOS:</strong> macOS 11 (Big Sur) or later</li>
         <li><strong>Windows:</strong> Windows 10 or later</li>
       </ul>
     </section>

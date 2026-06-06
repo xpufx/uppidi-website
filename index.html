@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uppidi Upload</title>
-  <meta name="description" content="A simple, cross-platform file uploader for Android, Linux, Windows, and web. Upload images, videos, and files to free hosting services.">
+  <meta name="description" content="Upload images, videos, and files to 19 hosting services from Android, Linux, or Windows. Built-in image editor with crop, paint, text, and filters.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
   <header>
@@ -27,7 +27,7 @@
       <img src="assets/logo-light.png" alt="Uppidi Upload logo" width="200" height="200">
     </picture>
     <h1>Uppidi Upload</h1>
-    <p>Uppidi Upload is an open source, cross-platform application for uploading media and files to public and private providers. Upload images, videos, and other files from your phone, tablet, or desktop and share the URL anywhere, including IRC (backed by a public provider of your choice for the file itself).</p>
+    <p>Uppidi Upload is an open source, cross-platform application for uploading media and files to public and private providers. Upload images, videos, and other files from your phone, tablet, or desktop and share the URL anywhere, including IRC (backed by a public provider of your choice for the file itself). Built-in image editor lets you crop, paint, add text, apply filters, emoji, blur, and pixelate before uploading or saving locally.</p>
     <p><a href="download.html" role="button">Download Now ⬇</a></p>
   </header>
 
@@ -35,18 +35,19 @@
     <section>
       <h2>Features</h2>
       <ul>
-        <li><strong>13 hosting providers</strong> — Catbox, FileDitch, Frisk, Litterbox, Uguu.se, TmpFile.link, FreeImage.host, TempSH, plus your own Telegram Bot, Zulip, CustomUguu, and Matterbridge</li>
+        <li><strong>19 hosting providers</strong> — Catbox, FileDitch, Frisk, Litterbox, Uguu.se, TmpFile.link, FreeImage.host, TempSH, GoFile, Filebin.net, Filester.me, Storage.to, Bzzhr.to, HttpBin.org (test), plus your own Telegram Bot, Zulip, CustomUguu, Matterbridge, and Local (Image Editor)</li>
         <li><strong>Your own infrastructure</strong> — configure and authenticate with private servers: Telegram Bot, Zulip, self-hosted Uguu, and Matterbridge for IRC/Discord/Matrix/Slack relay</li>
+        <li><strong>Built-in image editor</strong> — a full editing tab with crop, paint, text, filters, emoji, blur, and pixelate on a checkered canvas. Save locally or upload to any provider. Also functions as a standalone image editor</li>
         <li><strong>Desktop-first experience</strong> — drag files from your file manager, paste images from clipboard, real hover overlay feedback</li>
         <li><strong>Message templates</strong> — set a global template in Settings ({url}, {filename}, {filesize}) and edit per upload</li>
         <li><strong>History → IRC pipeline</strong> — re-share any past upload to a Matterbridge gateway from the history screen</li>
         <li><strong>Streaming uploads</strong> — handles large files without consuming excessive memory</li>
-        <li><strong>Image quality selector</strong> — choose Original, Medium (50%), or Low (25%) compression</li>
-        <li><strong>Image cropping</strong> — crop images before uploading</li>
+        <li><strong>My Providers dialog</strong> — manage custom instances and credentials for private services</li>
         <li><strong>Provider health checks</strong> — test connectivity and enable/disable providers</li>
+        <li><strong>Settings backup</strong> — structured export and import of all app settings</li>
         <li><strong>Dark &amp; light theme</strong> — system-following theme with customizable seed colors</li>
         <li><strong>Multi-language</strong> — English, Turkish, Italian, Esperanto, and Klingon (we do not discriminate against the Alien or the Woke)</li>
-        <li><strong>Cross-platform</strong> — Android, Linux, macOS, and Windows</li>
+        <li><strong>Cross-platform</strong> — Android, Linux (tar.gz, AppImage, Flatpak), and Windows</li>
       </ul>
     </section>
 
@@ -126,7 +127,7 @@
           </tr>
           <tr>
             <td><img src="assets/provider-icons/fileditch.png" alt="" width="14" height="14"> FileDitch</td>
-            <td>25 GB</td>
+            <td>100 GB</td>
             <td>Indefinite</td>
             <td data-status="live">Live</td>
             <td>Inactive &gt;30d may delete</td>
@@ -141,21 +142,21 @@
           <tr>
             <td><img src="assets/provider-icons/litterbox.png" alt="" width="14" height="14"> Litterbox</td>
             <td>1 GB</td>
-            <td>1h / 24h / 72h</td>
+            <td>1h / 12h / 24h / 72h</td>
             <td data-status="live">Live</td>
             <td>Temporary/expiring files</td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/uguu_uguu_se.png" alt="" width="14" height="14"> Uguu.se</td>
-            <td>256 MB</td>
-            <td>—</td>
+            <td>128 MB</td>
+            <td>3 hours</td>
             <td data-status="live">Live</td>
             <td></td>
           </tr>
           <tr>
             <td><img src="assets/provider-icons/tmpfilelink.png" alt="" width="14" height="14"> TmpFile.link</td>
-            <td>—</td>
-            <td>—</td>
+            <td>100 MB</td>
+            <td>7 days</td>
             <td data-status="live">Live</td>
             <td></td>
           </tr>
@@ -208,6 +209,48 @@
             <td data-status="live">Live</td>
             <td>Relay to IRC, Discord, Matrix, Slack, Telegram</td>
           </tr>
+          <tr>
+            <td><img src="assets/provider-icons/gofile.png" alt="" width="14" height="14"> GoFile</td>
+            <td>Unlimited</td>
+            <td>10 days without download</td>
+            <td data-status="live">Live</td>
+            <td>Anonymous file hosting</td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/filebin.png" alt="" width="14" height="14"> Filebin.net</td>
+            <td>150 MB</td>
+            <td>6 months</td>
+            <td data-status="live">Live</td>
+            <td>Pastebin-style bins</td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/filester.png" alt="" width="14" height="14"> Filester.me</td>
+            <td>100 GB</td>
+            <td>30 days</td>
+            <td data-status="live">Live</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/storage_to.png" alt="" width="14" height="14"> Storage.to</td>
+            <td>—</td>
+            <td>—</td>
+            <td data-status="live">Live</td>
+            <td>Cloud storage, presigned uploads</td>
+          </tr>
+          <tr>
+            <td><img src="assets/provider-icons/bzzhr.png" alt="" width="14" height="14"> Bzzhr.to</td>
+            <td>—</td>
+            <td>~4 days</td>
+            <td data-status="live">Live</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>💾 Local (Image Editor)</td>
+            <td>Device storage</td>
+            <td>—</td>
+            <td data-status="live">Live</td>
+            <td>Save edited images to device</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -216,8 +259,7 @@
       <h2>Platforms</h2>
       <ul>
         <li><strong>Android</strong> &mdash; phones and tablets (arm64-v8a, armeabi-v7a, x86_64)</li>
-        <li><strong>Linux</strong> &mdash; desktop (tar.gz + AppImage)</li>
-        <li><strong>macOS</strong> &mdash; desktop (DMG)</li>
+        <li><strong>Linux</strong> &mdash; desktop (tar.gz, AppImage, Flatpak)</li>
         <li><strong>Windows</strong> &mdash; desktop (zip)</li>
       </ul>
     </section>
